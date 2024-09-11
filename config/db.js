@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
+const dontenv = require("dotenv");
+dotenv.config();
 
 async function db() {
-  await mongoose.connect(
-    "mongodb+srv://Tahirkhan7:Tahirkhan7@cluster0.9hgxvan.mongodb.net/expressjs-crud"
-  );
+  await mongoose.connect(process.env.MONGO_URI);
 }
 
 module.exports = db;
