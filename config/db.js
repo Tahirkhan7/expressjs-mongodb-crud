@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const dontenv = require("dotenv");
+const dotenv = require("dotenv");
 dotenv.config();
 
 async function db() {
